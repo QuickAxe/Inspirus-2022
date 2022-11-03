@@ -1,6 +1,6 @@
 // a sample code to test sd working
 
-const { resolve } = require("path");
+//const { resolve } = require("path");
 var spawn = require("child_process").spawn;
 
 // child.stdout.on('data', function (chunk) {
