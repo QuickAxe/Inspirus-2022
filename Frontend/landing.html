@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style2.css" />
+    <title>Landing</title>
+  </head>
+  <body>
     <script src="https://cdn.tailwindcss.com"></script>
-    <nav class="flex items-center justify-between flex-wrap p-6">
+    <nav class="flex items-center justify-between flex-wrap  p-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <svg
           class="fill-current h-8 w-8 mr-2"
@@ -26,7 +22,7 @@
             d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
           />
         </svg>
-        <span class="font-semibold text-xl tracking-tight" id="product">Product Name</span>
+        <span style="margin-left: 10px;"class="font-semibold text-xl tracking-tight">Product Name</span>
       </div>
       <div class="block lg:hidden">
         <button
@@ -58,31 +54,49 @@
           </a>
           <a
             href="#responsive-header"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" id="signup"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
           >
-            Sign Up
+            Sign In
           </a>
         </div>
         <div>
           <a
-            href="signin.html"
+            href="#"
             class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
             >Sign In</a
           >
         </div>
       </div>
-   
-   <br>
-   <form>
-    <label for="theme">Theme:</label><br>
-    <input type="text" id="theme" name="theme"><br>
-    <label for="descri">Detailed Description:</label><br>
-    <input type="text" id="descri" name="descri"><br>
-    <label for="color">Color:</label><br>
-    <input type="text" id="color" name="color">
-    </form>
-    
-    
-    
-</body>
+    </nav>
+    <div class="inputs">
+      <br /><br /><br /><br /><br />
+      <script src="scripts/script1.js"></script>
+
+      <h1>Theme</h1>
+      <br />
+      <input id="text1" placeholder="Enter anything" />
+      <br />
+      <br />
+      <h1>Detailed Description</h1>
+      <br />
+      <input id="text2" placeholder="Enter anything" />
+      <br />
+      <br />
+      <h1>Colors</h1>
+      <br />
+      <input id="text3" placeholder="Enter anything" />
+      <br />
+
+      <br />
+      <br />
+      <button
+        onclick="f1()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+      >
+        Submit
+      </button>
+      <br />
+    </div>
+  </body>
 </html>
