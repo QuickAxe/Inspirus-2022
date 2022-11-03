@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 const port = 8000;
 require('dotenv/config')
 
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());   
 
 
 // Routes
@@ -23,10 +25,11 @@ app.listen(port, () => {
 });
 
 // connecting to MongoDB
-mongoose.connect(
-    process.env.DB_CONNECTION,
-    { useNewUrlParser: true},
-    () => console.log('Connected to MongoDB!')
-);
-    
-//module.exports = app;
+
+mongoose 
+ .connect(process.env.MONGO_PROD_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+          })   
+ .then(() => console.log("Database connected!"))
+ .catch(err => console.log(err));  

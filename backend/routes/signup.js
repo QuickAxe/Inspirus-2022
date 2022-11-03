@@ -2,33 +2,26 @@ const express = require('express');
 const Users = require('../models/Users');
 const router = express.Router();
 
-//const bodyParser = require('body-parser');
-//app.use(bodyParser);
-
-
-router.get('/', (req,res) => {
-    res.send("Sign-up page");
+router.get('/', async (req, res) => {
+    try {
+        const users = await Users.find(res.body);
+        res.status(201).json(users);
+    } catch (err) {
+        res.status(400).send(err);
+    }
 });
 
-router.post('/', (req,res) => {
-    const user = new Users({
-        username: req.body.username,
-        password: req.body.password
-    });
-    user.save()
-    .exec()
-    .then( data=> {
-        res.json(data);
-    })
-    .catch(err =>{
-        res.json({message:err});
-    });
-    // //try {
-    //     const savedUser = await user.save();
-    //     res.json(savedUser);
-    // //} catch(error) {
-    //   //  res.json({message:err});
-    // //}
+router.post('/', async (req, res) => {
+    const user = await new Users(req.body);
+    //res.send(user);
+    user.save((err) => {
+        if (err)
+            return console.log(err);
+        else
+            res.status(201).send(user);
+    }
+    );
+    
 });
 
 module.exports = router;
