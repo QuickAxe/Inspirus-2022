@@ -17,42 +17,10 @@ const sd = require('./routes/sd.js');
 app.use('/landing(.html)?', sd);
 
 
-// app.get('/', (req, res) => {
-//     res.send('Hello world');
-// }
-// );
-app.set('view engine', 'ejs');
-
-app.use(session({
-  resave: false,
-  saveUninitialized: true,
-  secret: 'SECRET'
-}));
-
-app.get('/', function (req, res) {
-  res.render('pages/auth');
-});
-
-/*  PASSPORT SETUP  */
-
-const passport = require('passport');
-var userProfile;
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.set('view engine', 'ejs');
-
-app.get('/success', (req, res) => res.send(userProfile));
-app.get('/error', (req, res) => res.send("error logging in"));
-
-passport.serializeUser(function (user, cb) {
-  cb(null, user);
-});
-
-passport.deserializeUser(function (obj, cb) {
-  cb(null, obj);
-});
+app.get('/', (req, res) => {
+    res.send('Hello world');
+}
+);
 
 
 // connecting to MongoDB
