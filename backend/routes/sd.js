@@ -1,7 +1,7 @@
 //theme, des, color
 const express = require('express');
 const router = express.Router();
-const sd = require('.../sd/sd_module.js');
+const sd = require('../sd/sd_module.js');
 
 
 
