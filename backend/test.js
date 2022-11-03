@@ -14,7 +14,7 @@ const port = 8000;
 app.use(express.json());
 
 
-app.use('/landing(.html)?', sd);
+app.use('/landing(.html)?', async await sd);
 
 app.listen(port, () => {
     console.log(`Listening on ${port}`);

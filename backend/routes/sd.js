@@ -4,9 +4,10 @@ const router = express.Router();
 const sd = require('.../sd/sd_module.js');
 
 
+
 router.post('/', async (req, res) => {
     const prompt = req.body;
-    await
+    await sd.
     //res.send(user);
     user.save((err) => {
         if (err)
