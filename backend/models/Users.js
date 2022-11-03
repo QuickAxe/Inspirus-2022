@@ -11,7 +11,8 @@ const UserSchema = mongoose.Schema(
             type: String,
             lowercase: true,
             required: true
-        }
+        },
+        cloudinary_id: String
     }
 );
 
