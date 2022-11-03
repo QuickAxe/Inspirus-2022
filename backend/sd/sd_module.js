@@ -15,11 +15,11 @@ module.exports = function generate(colour, theme, prompt) {
             '--ddim_eta', 'DDIM_ETA',
             '--n_samples', '4'
         ]);
-
+        
         process.on('exit', function (code) {
             resolve(code);
         });
-
+        
         process.on('error', function (error) {
             reject(err);
         });
