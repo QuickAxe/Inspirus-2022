@@ -1,35 +1,28 @@
 body {
-    
-    background: linear-gradient(to left,#0b1020,#0B294A);
-    font-family: "Roboto", sans-serif;
-    color: white;
-  }
+  background: linear-gradient(to left, #0b1020, #0b294a);
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
 
-  .inputs
-  {
-    position: absolute;
-    left:225px;
-  }
-  input
-  {
-    
-    height: 40px;
-    width: 300px;
-    border-radius:4px;
-    
-  }
-  #text1
-  {
-    color:black;
-    padding-left: 10px;
-  }
-  #text2
-  {
-    color:black;
-    padding-left: 10px;
-  }
-  #text3
-  {
-    color:black;
-    padding-left: 10px;
-  }
+.inputs {
+  position: absolute;
+  left: 225px;
+  
+}
+input {
+  height: 40px;
+  width: 300px;
+  border-radius: 4px;
+}
+#text1 {
+  color: black;
+  padding-left: 10px;
+}
+#text2 {
+  color: black;
+  padding-left: 10px;
+}
+#text3 {
+  color: black;
+  padding-left: 10px;
+}
