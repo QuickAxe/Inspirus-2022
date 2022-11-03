@@ -34,12 +34,12 @@ var spawn = require('child_process').spawn;
 // }
 
 
-module.exports = function generate(colour, theme, prompt) {
+module.exports = function generate(theme, prompt, colour) {
 
     return new Promise(function (resolve, reject) {
         const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
-        const child = spawn('python', [
-            './sd/scripts/txt2img.py', '--prompt',
+        const child = spawn('C:\Users\Atharva\anaconda3\Scripts\activate.bat cd C:\Users\Atharva\Desktop\Team-TNT__INSPIRUS22\backend\stable-diffusion && conda activate ldm ', [
+            'python optimizedSD/optimized_txt2img.py', '--prompt',
             prompt_full, '--outdir', './output_temp/',
             '--ddim_eta', 'DDIM_ETA',
             '--n_samples', '4'
