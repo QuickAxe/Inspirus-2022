@@ -5,6 +5,11 @@ const router = express.Router();
 //const bodyParser = require('body-parser');
 //app.use(bodyParser);
 
+
+router.get('/', (req,res) => {
+    res.send("Sign-up page");
+});
+
 router.post('/', (req,res) => {
     const user = new Users({
         username: req.body.username,

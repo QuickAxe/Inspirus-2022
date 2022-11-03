@@ -1,14 +1,9 @@
-//import express from 'express'
-//import 
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
-const port = 3000;
+const port = 8000;
 require('dotenv/config')
 
-
-const bodyParser = require('body-parser');
-app.use(bodyParser);
 
 
 // Routes
@@ -34,4 +29,4 @@ mongoose.connect(
     () => console.log('Connected to MongoDB!')
 );
     
-module.exports = app;
+//module.exports = app;
