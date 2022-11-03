@@ -4,8 +4,17 @@ body {
     font-family: "Roboto", sans-serif;
     color: white;
   }
+
   .inputs
   {
     position: absolute;
     left:225px;
+  }
+  input
+  {
+    color:black;
+    height: 40px;
+    width: 300px;
+    border-radius:4px;
+    
   }
