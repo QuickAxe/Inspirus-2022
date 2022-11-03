@@ -13,6 +13,10 @@ app.use(express.json());
 const signupRoute = require('./routes/signup.js');
 app.use('/signup', signupRoute);
 
+const userRoute = require('./routes/user.js');
+app.use('/user', userRoute);
+
+
 const sd = require('./routes/sd.js');
 app.use('/landing(.html)?', sd);
 
