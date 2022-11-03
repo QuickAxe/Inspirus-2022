@@ -1,5 +1,3 @@
-//import express from 'express'
-//import 
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
@@ -31,4 +29,4 @@ mongoose.connect(
     () => console.log('Connected to MongoDB!')
 );
     
-module.exports = app;
+//module.exports = app;
