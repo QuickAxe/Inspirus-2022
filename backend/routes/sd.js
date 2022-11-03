@@ -7,7 +7,7 @@ const sd = require('.../sd/sd_module.js');
 
 router.post('/', async (req, res) => {
     const prompt = req.body;
-    await sd;
+    await sd(prompt.theme, prompt.des, prompt.color);
     //res.send(user);
     user.save((err) => {
         if (err)
