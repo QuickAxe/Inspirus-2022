@@ -7,7 +7,7 @@ var spawn = require('child_process').spawn;
 
 module.exports = function generate(colour, theme, prompt) {
 
-    return new promise(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
         const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
         const child = spawn('python', [
             './sd/scripts/txt2img.py', '--prompt',
