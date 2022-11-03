@@ -1,29 +1,28 @@
-// self.url_txt2img = "http://localhost:7860/sdapi/v1/txt2img"
-// self.simple_txt2img = {
-//     "enable_hr": False,
-//     "denoising_strength": 0,
-//     "firstphase_width": 0,
-//     "firstphase_height": 0,
-//     "prompt": "example prompt",
-//     "styles": [],
-//     "seed": -1,
-//     "subseed": -1,
-//     "subseed_strength": 0,
-//     "seed_resize_from_h": -1,
-//     "seed_resize_from_w": -1,
-//     "batch_size": 1,
-//     "n_iter": 1,
-//     "steps": 3,
-//     "cfg_scale": 7,
-//     "width": 64,
-//     "height": 64,
-//     "restore_faces": False,
-//     "tiling": False,
-//     "negative_prompt": "",
-//     "eta": 0,
-//     "s_churn": 0,
-//     "s_tmax": 0,
-//     "s_tmin": 0,
-//     "s_noise": 1,
-//     "sampler_index": "Euler a"
-// }
+const { resolve } = require('path');
+var spawn = require('child_process').spawn;
+
+// child.stdout.on('data', function (chunk) {
+//     // output will be here in chunks
+// });
+
+module.exports = function generate(colour, theme, prompt) {
+
+    return new promise(function (rsolve, reject) {
+        const prompt = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
+        const child = spawn('python', [
+            './sd/scripts/txt2img.py', '--prompt',
+            prompt, '--outdir', './output_temp/',
+            '--ddim_eta', 'DDIM_ETA',
+            '--n_samples', '4'
+        ]);
+
+        process.on('exit', function (code) {
+            resolve(code);
+        });
+
+        process.on('error', function (error) {
+            reject(err);
+        });
+
+    });
+}; 
