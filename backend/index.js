@@ -5,9 +5,12 @@ const mongoose = require('mongoose')
 const port = 8000;
 require('dotenv/config')
 
-app.use(express.urlencoded({ extended: true }));
+// parse requests of content-type - application/json
 app.use(express.json());
-
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(express.urlencoded({
+  extended: true
+}));
 
 // Routes
 const signupRoute = require('./routes/signup.js');
@@ -37,7 +40,7 @@ mongoose
   .catch(err => console.log(err));
 
 
-//
+
 
 
 app.listen(port, () => {

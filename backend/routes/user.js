@@ -1,3 +1,5 @@
+//! This file is just to see the syntax. Delete after making changes
+
 const router = require("express")
   .Router();
 const cloudinary = require("../utils/cloudinary");
