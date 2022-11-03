@@ -1,11 +1,16 @@
 body {
-  background-color: #0b1020 ;
-  
+  background-color: #0b1020;
+  color: white;
 }
-#signup
-{
+#signup {
   margin-left: 1015px;
 }
-.prompt{
-  color:white;
+.prompt {
+  color: white;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+h2
+{
+  display:block;
 }
