@@ -1,3 +1,5 @@
+// a sample code to test sd working
+
 const { resolve } = require('path');
 var spawn = require('child_process').spawn;
 
@@ -5,12 +7,14 @@ var spawn = require('child_process').spawn;
 //     // output will be here in chunks
 // });
 
-const prompt = ""
+const prompt = "earth getting stabbed with a knife";
+const colour = "green and blue";
+const theme = "star wars";
 
-const prompt = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
+const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
 const child = spawn('python', [
     './sd/scripts/txt2img.py', '--prompt',
-    prompt, '--outdir', './output_temp/',
+    prompt_full, '--outdir', './output_temp/',
     '--ddim_eta', 'DDIM_ETA',
     '--n_samples', '4'
 ]);
