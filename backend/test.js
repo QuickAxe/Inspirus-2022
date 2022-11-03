@@ -13,7 +13,7 @@ const app = express();
 const port = 8000;
 app.use(express.json());
 
-const sd = require('./routes/sd.js');
+
 app.use('/landing(.html)?', sd);
 
 app.listen(port, () => {
