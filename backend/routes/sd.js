@@ -9,10 +9,10 @@ router.post('/', async (req, res) => {
     const prompt = req.body;
     await sd(prompt.theme, prompt.des, prompt.color);
     //res.send(user);
-   /*
-   database stuff prompt userid
-   */
-
+    /*
+    database stuff prompt userid
+    */
+    conmsole.log(prompt);
     res.send(200);
 });
 

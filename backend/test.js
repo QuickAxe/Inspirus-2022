@@ -5,9 +5,9 @@ var spawn = require("child_process").spawn;
 const sd = require('./routes/sd.js');
 
 
-const prompt = "earth getting stabbed with a knife";
-const colour = "green and blue";
-const theme = "star wars";
+// const prompt = "earth getting stabbed with a knife";
+// const colour = "green and blue";
+// const theme = "star wars";
 const express = require('express');
 const app = express();
 const port = 8000;
