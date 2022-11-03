@@ -2,28 +2,40 @@
 
 //const { resolve } = require("path");
 var spawn = require("child_process").spawn;
+const sd = require('./routes/sd.js');
 
-// child.stdout.on('data', function (chunk) {
-//     // output will be here in chunks
-// });
 
 const prompt = "earth getting stabbed with a knife";
 const colour = "green and blue";
 const theme = "star wars";
+const express = require('express');
+const app = express();
+const port = 8000;
+app.use(express.json());
 
-const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
-const child = spawn('python', [
-    './sd/scripts/txt2img.py', '--prompt',
-    prompt_full, '--outdir', './output_temp/',
-    '--ddim_eta', 'DDIM_ETA',
-    '--n_samples', '4'
-]);
+const sd = require('./routes/sd.js');
+app.use('/landing(.html)?', sd);
 
-process.on('exit', function (code) {
-    resolve(code);
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
 });
 
-process.on('error', function (error) {
-    reject(err);
-});
+
+
+
+// const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
+// const child = spawn('python', [
+//     './sd/scripts/txt2img.py', '--prompt',
+//     prompt_full, '--outdir', './output_temp/',
+//     '--ddim_eta', 'DDIM_ETA',
+//     '--n_samples', '4'
+// ]);
+
+// process.on('exit', function (code) {
+//     resolve(code);
+// });
+
+// process.on('error', function (error) {
+//     reject(err);
+// });
 
