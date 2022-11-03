@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-        const users = await Users.find(res.body);
+        const users = await Users.findById(res.body);
         res.status(201).json(users);
     } catch (err) {
         res.status(400).send(err);
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     //res.send(user);
     user.save((err) => {
         if (err)
-            return console.log(err);
+            return console.log(err.message);
         else
             res.status(201).send(user);
     }
