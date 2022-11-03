@@ -2,8 +2,8 @@ const express = require('express');
 const Users = require('../models/Users');
 const router = express.Router();
 
-const bodyParser = require('body-parser');
-app.use(bodyParser);
+//const bodyParser = require('body-parser');
+//app.use(bodyParser);
 
 router.post('/', (req,res) => {
     const user = new Users({
