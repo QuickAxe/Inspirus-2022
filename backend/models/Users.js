@@ -1,18 +1,12 @@
 const mongoose = require('mongoose');
+const Images = require('./Images');
 
 // Schema for a how a user looks in the database
 const UserSchema = mongoose.Schema(
     {
-        username: {
-            type: String,
-            required: true
-        },
-        email: {
-            type: String,
-            lowercase: true,
-            required: true
-        },
-        cloudinary_id: String
+        username: String,
+        email: String,
+        images: [Images.schema]
     }
 );
 
