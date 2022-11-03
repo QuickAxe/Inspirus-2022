@@ -10,10 +10,10 @@ app.use(express.json());
 
 
 // Routes
-const signupRoute = require('./routes/signup');
+const signupRoute = require('./routes/signup.js');
 app.use('/signup', signupRoute);
 
-const sd = require('./routes/sd');
+const sd = require('./routes/sd.js');
 app.use('/landing(.html)?', sd);
 
 
@@ -65,5 +65,5 @@ mongoose
   .catch(err => console.log(err));
 
 app.listen(port, () => {
-  console.log(`Listen on ${port}`);
+  console.log(`Listening on ${port}`);
 });
