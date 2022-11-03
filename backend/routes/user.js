@@ -2,7 +2,12 @@ const router = require("express")
   .Router();
 const cloudinary = require("../utils/cloudinary");
 const upload = require("../utils/multer");
-const User = require("../models/User");
+const User = require('../models/Users');
+
+router.get('/', (req,res)=>{
+    res.send('User page test');
+}
+);
 
 router.post("/", upload.single("image"), async (req, res) => {
     try {
