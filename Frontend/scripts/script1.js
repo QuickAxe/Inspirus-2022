@@ -9,11 +9,12 @@ data = {
         "theme":str1,
         "des":str2,
         "color":str3
-    }
+    };
+    //let s=JSON.strigify(json_file_name);
 //console.log(data);
 
 //str=JSON.stringify(data);
-const URL = 'http://localhost:8000/landing'
+const URL = 'http://localhost:8000/landing/'
 fetch(URL, {
     method: 'post',
     body:data
