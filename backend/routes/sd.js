@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 
     console.log(prompt);
     await sd(prompt.theme, prompt.des, prompt.color);
-    /*
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb    /*
     database stuff prompt userid
     */
 
