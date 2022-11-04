@@ -7,7 +7,7 @@ var spawn = require('child_process').spawn;
 
 // initialising stable diffusion backend
 
-const child = spawn('cd C:\Users\Atharva\Desktop\Team-TNT__INSPIRUS22\backend\stable-diffusion && conda env create -f environment.yaml && conda activate ldm', {shell: true});
+const child = spawn('cd C:\\Users\\Atharva\\Desktop\\Team-TNT__INSPIRUS22\\backend\\stable-diffusion && conda env create -f environment.yaml && conda activate ldm', {shell: true});
 
 child.stderr.on('data', (data) => {
   console.error(`stderr: ${data}`);
