@@ -3,12 +3,14 @@ const Users = require('../models/Users');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    try {
-        const users = await Users.findById(res.body);
-        res.status(201).json(users);
-    } catch (err) {
-        res.status(400).send(err);
-    }
+    const users = await Users.find();
+    res.send(users);
+    // try {
+    //     const users = await Users.findById(res.body);
+    //     res.status(201).json(users);
+    // } catch (err) {
+    //     res.status(400).send(err);
+    // }
 });
 
 router.post('/', async (req, res) => {
