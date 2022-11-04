@@ -2,6 +2,22 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const mongoose = require('mongoose')
+var spawn = require('child_process').spawn;
+
+
+// initialising stable diffusion backend
+
+const child = spawn('cd C:\Users\Atharva\Desktop\Team-TNT__INSPIRUS22\backend\stable-diffusion && conda env create -f environment.yaml && conda activate ldm', {shell: true});
+
+child.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+
+
+
+
+
 const port = 8000;
 require('dotenv/config')
 

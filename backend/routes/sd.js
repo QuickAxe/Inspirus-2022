@@ -9,8 +9,7 @@ router.post('/', async (req, res) => {
     const prompt = req.body;
 
     console.log(prompt);
-   // await sd(prompt.theme, prompt.des, prompt.color);
-    //res.send(user);
+    await sd(prompt.theme, prompt.des, prompt.color);
     /*
     database stuff prompt userid
     */
