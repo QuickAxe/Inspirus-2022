@@ -7,12 +7,14 @@ const sd = require('../sd/sd_module.js');
 
 router.post('/', async (req, res) => {
     const prompt = req.body;
+
+    conmsole.log(prompt);
     await sd(prompt.theme, prompt.des, prompt.color);
     //res.send(user);
     /*
     database stuff prompt userid
     */
-    conmsole.log(prompt);
+
     res.send(200);
 });
 
