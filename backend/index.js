@@ -2,6 +2,26 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 const mongoose = require('mongoose')
+var spawn = require('child_process').spawn;
+
+
+// initialising stable diffusion backend
+
+const child = spawn('cd', ['C:\Users\Atharva\Desktop\Team-TNT__INSPIRUS22\backend\stable-diffusion']);
+child.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+
+child.stderr.on('data', (data) => {
+  console.error(`stderr: ${data}`);
+});
+const child1 = spawn('conda activate ldm', {
+  shell: true
+});
+
+
+
+
 const port = 8000;
 require('dotenv/config')
 
