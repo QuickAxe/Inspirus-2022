@@ -10,7 +10,7 @@ module.exports = function generate(theme, prompt, colour) {
     return new Promise(function (resolve, reject) {
         const prompt_full = `poster of ${prompt}, ${colour} color theme, in the style of ${theme}, highly detailed, 4k, intricate details, art by greg rutkowski`;
 
-        const child = spawn(`python stable-diffusion/optimizedSD/optimized_txt2img.py -- prompt ${prompt_full} --outdir ..\output_temp --n_samplers 4`, {
+        const child = spawn(`python stable-diffusion\\optimizedSD\\optimized_txt2img.py -- prompt ${prompt_full} --outdir ..\\output_temp --n_samplers 4`, {
             shell: true
           });
 
