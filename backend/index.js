@@ -5,6 +5,12 @@ const mongoose = require('mongoose')
 const port = 8000;
 require('dotenv/config')
 
+// CORS config
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 // parse requests of content-type - application/json
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
