@@ -15,7 +15,7 @@ data = {
 
 //str=JSON.stringify(data);
 const URL = 'http://localhost:8000/landing/'
-fetch(URL, {
+post(URL, {
     method: 'post',
     body:data
 })
